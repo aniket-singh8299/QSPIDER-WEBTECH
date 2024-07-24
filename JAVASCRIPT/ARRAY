@@ -1,0 +1,35 @@
+ARRAY IS a continuous block of memory
+In jS,  Array is HETEROGENOUS in Nature(means different types of data like function,string,int,object,nested array) not same(like string HOMOGENOUS)
+IN JS WE CREATE ARRAY IN TWO WAYS
+1) ARRAY LITERALS
+2) BY USING AN ARRAY CONSTRUCTOR (Using New Keyword:- to create a object)
+
+In Array Constructor (when we pass value than it will create empty*10) and pass string than it will give array element and if we will give boolean than it will give element
+BUT IF WE pass multiple value than it will consider as array elements
+   
+IN JS, ARRAY LENGTH IS NOT FIXED
+
+
+
+
+ALWAYS USE CONST VARIABLE RATHER THAN VARIBALE BECAUSE OF SECURITY
+
+
+
+
+//Hoisting is possible in which type of function
+
+//Function Hoisting possible where we not initalize with variable-
+
+
+
+//ADVANCE ARRAY METHODS
+
+1) ForEach()
+2) Map()
+3) Filter()
+4) Reduce()
+5) find()
+
+
+1) ForEach:- 
