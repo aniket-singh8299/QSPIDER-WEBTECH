@@ -1,34 +1,23 @@
-let section=document.querySelector("section")
-let article=document.querySelector("article")
-let main=document.querySelector("main")
+let section = document.querySelector(".box1");
+console.log(section);
+     
+section.addEventListener("click", (e)=>{
+    e.stopPropagation()
+     section.style.backgroundColor="red";
+});
 
-section.addEventListener("click",(E)=>{
-    E.stopPropagation();
-    section.style.backgroundColor="red";
-})
-article.addEventListener("click",(E)=>{
-    E.stopPropagation();
-    article.style.backgroundColor="yellow";
+let section1 = document.querySelector(".box2");
+section1.addEventListener("click", (e)=>{
+    e.stopPropagation()
+    section1.style.backgroundColor="blue"; 
+});
 
-})
-main.addEventListener("click",(E)=>{
-    E.stopPropagation();
-    main.style.backgroundColor="aqua";
-})
-
-
-//HOW ARE OUR EVENTS TRAVELLING THROUGH DOM TREE
-//WE HAVE TWO PHASE
-//DEFAULT PHASE IS BUBBLING PHASE
-//1) CAPTURING:-EVENTS EXECUTING FROM  OUTERMOST TO INNERMOST
-//2)BUBBLING PHASE:- events execution from innermost to outermost
-
-//WE HAVE METHOD TO STOP EVENT PROPAGATION so use EVENTPROPAGATION
-// SO USE ANY ARGUMENT IN CALL BACK
-//THEN TARGET USE BY E.STOPPROPAGATION
+let section2 = document.querySelector(".box3");
+section2.addEventListener("click", (e)=>{
+    e.stopPropagation()
+    section2.style.backgroundColor="yellow"; 
+}); 
 
 
-//TO STOP DEFAULT BEHAVIOUR OF FORM(REFERSESHING)AND ANCHOR
-//USE E.PREVENTDEFAULT()
-
-
+// prevent default - to stop default behaviour (any behaviour like form refreshing or navigation)
+// e.preventdefault()

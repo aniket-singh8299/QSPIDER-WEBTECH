@@ -1,162 +1,95 @@
-// //STRING:- COLLECTION OF ONE OR MORE CHARACTERS IS Called String.
-// //three ways to define String
-// //1)Single quote
-// //2)Double quote
-// //3)Backtick  (tedaquote)
+// let str = 'Velocitai';
+// console.log(str) ;              //single quotes
+// console.log(typeof(str));
+// let str1 = "velocitai" ;          //double quotes
+// console.log(str1); 
+// let str2 = `velocitai` ;        //bactick 
+// console.log(str2); 
+
+// let age = prompt("enter your age");
+// let str = "age of the person" + age + "he is eligible to vote."; 
+  //1st way - first seperate that strings then insert the variable
+ //there are two ways t0 use str 1- +   2- interpolation  ${}
+// console.log(str);
+ //2nd ways by using interpolation with bactick(only)  (interpolation is technique to use variable in string and it will work only in bactick)
+//when we use interpolation in string then that string is called template string 
+// let age1 = prompt("enter your age");
+// let str1 = `age of the person ${age1}  he is eligible to vote.`; 
+// console.log(str1);  
 
 
+//in string the index can start from negative also (-1,-2,-3)
+let str = "mantasha";
+console.log(str.length);
+console.log(str.slice(2,6));
+console.log(str.slice(-4 , -2));  //slice method will take positive and negative index
+console.log(str.substring(2,4));  //substring will not accept negative index
+//substr is depricated(no longer use) 
+console.log(str.substr(2,8));  // (starting index , length)
+let str1 = "saas is a css framework";
+console.log(str1.replace("saas", "tailwind" ));  // replace is used to replace the string (string which is to be replaced , replacable item) it will replace first occurence
+let str2 = "java and java script both are different";
+console.log(str2.replace("java script", "javascript" )); 
+console.log(str2.replaceAll("java", "python"));  // if we want to replace java with python like second java
+//replaceall will replace all occurence 
+console.log(str.toLowerCase());
+console.log(str.toUpperCase());
+console.log(str1.concat (str1,' ' ,str2));  // used to concat two string  
+console.log(str.trimStart()); //remove space from starting
+console.log(str.trimEnd());  // remove space from end
+console.log(str.trim());     //it will remove space from end and start (it is short hand) //first slice last four character 
+let mobileNo = "1234567890";  
+let no = mobileNo.slice(6);
+console.log(no); 
+console.log(no.padStart(10,"*"));  // accept two parametre(how much length we want , what you want like *)
 
-// //Single Quote
-// let str='Aniket Kumar Singh'
-// console.log(typeof str);
-
-// //Double quote
-// //Backtick
-// let str1=`Aniket Kumar Singh`
-// console.log(typeof str);
-
-// //Two ways to take variable in print statement
-// //1) + (we have to separate a string than insert a variable)
-// //2)Interpolation :- we have to use backtick (It is a technique to use variable in string)
-// //and interpolation is work only in backtick
-// //when we use interpolation in String than it is called Template String
-// //syntax:- `${}`
-// // let age=prompt("Enter The Number:-")
-// // let str2="Age of person is "+ age + " he is eligible for the voting";
-// // console.log(str2);
-// let age3=prompt("Enter The Number:-")
-// let str4=`Age of person is ${age3} he is eligible for the voting`;
-// console.log(str4);
-
-
-
-
-
-
-//String Methods
-//1)length:- It is used to find the length of the string
-
-let str6='ANIKET KUMAR SINGH';
-// console.log(str6.length);
+//OR 
+// let no1 = 7849; //******1234 */
+// console.log(no1.padStart(10,"*"));
 
 
+let mobileNo1 = "1234567890";  
+let no2 = mobileNo1.slice(0,4);
+console.log(no2);
+console.log(no2.padEnd(10,"*"));
+
+console.log(str.charAt(2));
+//console.log(str.charAt(-2)); //charAt() is not supporting -ve index
+console.log(str.charCodeAt(2));  // it gives ASCII code (it convert character into ASCII code)
+console.log(String.fromCharCode(97));  //it is a contructor method (it convert ascii into string)
+console.log(str.split());   // to convert string into array
 
 
-// //2)concat:- It is used to concatenate two strings
-let a="I am ANIKET";
-let b="KUMAR";
-let c="SINGH";
-console.log(a.concat(b).concat(c));
-
-
-
-// //3)slice():- it will accept both positive and negative index
-// //give n+1
-// //start from o indexing
-// console.log(str6.slice(0,7))
-
-//5)substr()
-//it will accept two parameters 1) Starting index 2) length
-//we will get depricated lines ,doesn't use
-//but substring not accept negative index but it will accept positive index
-// console.log(str6.substring());
-
-
-
-
-
-
-//6)replace()
-
-//used to replace the string
-//it will accept two parameters 1) string  2) string to be replaced
-let str7='    ANIKET KUMAR SINGH'
-
-console.log(str7.replace("Aniket","Varun"))
-console.log(str7);
-
-
-
-//7)replaceall()
-
-
-let st="JAVA AND JAVA SCRIPT BOTH ARE DIFFERENCE";
-console.log(st.replaceAll('JAVA','Python'));
-
-//8)toUpperCase()
-
-console.log(st.toUpperCase())
-//9)toLowerCase()
-console.log(st.toLowerCase())
-
-
-//10)trim()
-console.log(st.trim());
-
-//11)trimStart()
-st="      ANIKET       "
-console.log(st.trimStart());
-//12)trimEnd()
-console.log(st.trimEnd());
-
-//13)padStart():-
-let phone='8299505767'
-let no=phone.slice(6)
-console.log(no.padStart(10,'*'))
-
-//14)padEnd()
-let phon='8299505767'
-let nos=phon.slice(0,4)
-console.log(nos.padEnd(10,'*'))
-
-
-
-
-//15)charAt() //Can not use negative indexing
-console.log(phon.charAt(2))
-
-//16)charCodeAt()\
-//it will convert character to ascii value
-let str="8299505767"
-console.log(phon.charCodeAt(1))
-
-//it will convert ascii to character and String is a constructor
-console.log(String.fromCharCode(phon.charCodeAt(1)));
-
-
-
-//17)split()
-
-
-
-//ADVANCED FOR LOOPS
-//1)for of loop //It will return elements
-//2) for in //It will return Index
-//for of loop is used to iterate over iterable objects like arrays, strings, maps, sets,
-//etc. It is used to iterate over the elements of an iterable object. It is similar to
-//for in loop but it is used to iterate over the elements of an iterable object.
-let as ="ANIKET"
-for(let i of as){
- //   console.log(i)
+let arr = [10,20,30,40,50];
+for (const x of arr) {
+    console.log(x)
 }
 
-//for of can used in object but for in not used
+for (const x in arr) {
+    console.log(x)
+}
 
-                //For of                //for in
-//ARRAY          YES                      YES
-//STRING         YES                      YES
-//OBJECT        NO                        YES
-let aa={
-    "name":"VARUN",
-    "age":20}
-    for(let i in aa){
-        console.log(aa[i])
-    }
+let emp = {   
+    empName:"Mantasha",
+    empId:13,
+    salary:50000
     
+   };   
 
-for(let i in as){
- //   console.log(i)
+// for (const x of emp) {
+//     console.log(x);
+// }
+
+for (const x in emp) {
+    console.log(x);
 }
+
+
+
+
+
+
+
 
 
 
